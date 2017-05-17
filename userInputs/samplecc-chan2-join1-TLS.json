@@ -1,5 +1,5 @@
 {
-    "channelID": "_ch2",
+    "channelID": "_ch1",
     "chaincodeID": "sample_cc",
     "chaincodeVer": "v0",
     "chainID": "testchainid",
@@ -15,7 +15,7 @@
     "runDur": "600",
     "TLS": "enabled",
     "channelOpt": {
-        "name": "testOrgsChannel2",
+        "name": "mychannel",
         "action":  "join",
         "orgName": [
             "org1"
@@ -57,6 +57,6 @@
         }
     },
     "SCFile": [
-		{"ServiceCredentials":"SCFiles/config-chan2-TLS.json"}
+		{"ServiceCredentials":"SCFiles/config-chan1-TLS.json"}
 	]
 }

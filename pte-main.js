@@ -46,10 +46,10 @@ var FabricCAServices = require('fabric-ca-client/lib/FabricCAClientImpl');
 var FabricCAClient = FabricCAServices.FabricCAClient;
 var User = require('fabric-client/lib/User.js');
 var Client = require('fabric-client/lib/Client.js');
-var _commonProto = grpc.load(path.join(__dirname, '../../fabric-client/lib/protos/common/common.proto')).common;
+var _commonProto = grpc.load(path.join(__dirname, 'node_modules/fabric-client/lib/protos/common/common.proto')).common;
 
-var gopath=process.env.GOPATH;
-console.log('GOPATH: ', gopath);
+//var gopath=process.env.GOPATH;
+//console.log('GOPATH: ', gopath);
 
 utils.setConfigSetting('crypto-keysize', 256);
 
@@ -490,6 +490,9 @@ function chaincodeInstall(chain, client, org) {
 
     channelAddPeer(chain, client, org);
     //printChainInfo(chain);
+
+    //TODO: Probably this property is configurable ?
+    process.env.GOPATH = __dirname;
 
     nonce = utils.getNonce();
     tx_id = hfc.buildTransactionID(nonce, the_user);
