@@ -1,2 +1,7 @@
 node_modules/*
+channel-artifacts/Org1MSPanchors.tx
+channel-artifacts/Org2MSPanchors.tx
+channel-artifacts/channel.tx
+channel-artifacts/orderer.genesis.block
+crypto-config/*
 
